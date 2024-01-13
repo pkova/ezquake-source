@@ -2201,6 +2201,8 @@ void Serverinfo_Key(int key)
 		case K_BACKSPACE:
 			Serverinfo_Stop();
 			break;
+	        case K_MWHEELUP:
+                case K_UPARROW:
 		case K_PGUP:
 			if (CTab_GetCurrentId(&sb_tab) == SBPG_PLAYERS)
 			{
@@ -2221,6 +2223,8 @@ void Serverinfo_Key(int key)
 				Serverinfo_Change(servers[Servers_pos]);
 			}
 			break;
+		case K_MWHEELDOWN:
+                case K_DOWNARROW:
 		case K_PGDN:
 			if (CTab_GetCurrentId(&sb_tab) == SBPG_PLAYERS)
 			{
